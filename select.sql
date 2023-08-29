@@ -11,7 +11,7 @@ SELECT avg(price) FROM products;
 SELECT avg(price) FROM products GROUP BY brand;
 
 -- 5. Сума вартості всіх телефонів, які коштують в діапазоні від 1к до 2к
-SELECT sum(price) FROM products WHERE price BETWEEN 1000 AND 2000;
+SELECT sum(quantity * price) FROM products WHERE price BETWEEN 1000 AND 2000;
 
 -- 6. Кількість моделей кожного бренду
 SELECT brand, count(model) AS model_count FROM products GROUP BY brand;
