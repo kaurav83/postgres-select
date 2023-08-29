@@ -21,5 +21,10 @@ SELECT u.id AS user_id, count(o.id) AS order_count FROM users u
 LEFT JOIN orders o ON u.id = o.customer_id
 GROUP BY u.id ORDER BY u.id;
 
+--alternative 7
+SELECT customer_id, count(*)
+FROM orders
+GROUP BY customer_id;
+
 -- 8. Середня ціна телефону Huawei (якщо немає Huawei - порахуйте середню ціну якогось бренду, який є)
 SELECT avg(price) as average_price FROM products WHERE brand = 'Huawei';
